@@ -1,0 +1,140 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-image: url('../images/ondas.jpg');
+    background-repeat: no-repeat;
+    background-size: 210vh;
+    background-attachment: fixed;
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+header{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 30px;
+}
+header h1{
+    margin-left: 50px;
+    font-size: 2.5rem;
+}
+.fa-bars{
+    font-size: 2.5rem;
+    visibility: hidden;
+    margin: 0 10px;
+}
+.navbar{
+    position: absolute;
+    top: 90px;
+    width: 80%;
+    transition: .3s linear;
+    transform-origin: top;
+}
+.navbar a{
+    margin: 0 2%;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+.navbar a:hover{
+    transform: scale(1.2);
+    transition: .3s linear;
+}
+.home-imagen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 25px;
+}
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    position: relative;
+}
+.contenedor img{
+    padding: 3rem 0;
+}
+.texto-imagen{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    left: 65%;
+    width: 25rem;
+    height: 10rem;
+    background: linear-gradient(90deg, blue, blueviolet);
+    color: white;    
+}
+.formulario_contacto{
+    display: block;
+    margin: 50px auto;
+    padding: 20px;
+    height: 50vh;
+    background: linear-gradient(90deg, blue, blueviolet);
+    width: 25rem;
+    border-radius: 2rem;
+    color: white;
+}
+.formulario_contacto form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.formulario_contacto th{
+    padding: 10px 5px;
+}
+.formulario_contacto p{
+    padding: 0;
+    margin: 0;
+}
+
+footer{
+    text-align: center;
+    background: linear-gradient(90deg, violet, blue);
+    opacity: .7;
+    height: 8rem;
+    padding: 50px;
+    color: white;
+}
+footer a, i{
+    color: white;
+    margin: 15px 0;
+}
+footer a:hover{
+    opacity: .7;
+}
+
+/* Tienda */
+.card{
+    text-align: center;
+    height: 300px;
+    margin: 20px 0;
+}
+.card-img-top{
+    height: 13rem;
+    object-fit: cover;
+}
+
+@media (max-width: 750px) {
+    .fa-bars{
+        visibility: visible;
+    }
+    header input:checked ~ .fa-bars::before{
+        content: '\f00d';
+    }
+    .navbar{
+        transform: scaleY(0);
+    }
+    header input:checked ~ .navbar{
+        transform: scaleY(1);
+    }
+}
